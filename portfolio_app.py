@@ -157,9 +157,10 @@ with st.expander("University Projects @ Thomas More, Mechelen, Belgium"):
 with st.expander("Data Engineering Project, United Kingdom"):
     st.markdown("**Jan 2025 - Present**", unsafe_allow_html=True)
     st.write("""
+    - BookHarvest: A Python data pipeline that extracts book details (titles, authors, ratings, covers) from APIs, web pages, and CSVs, stores them in SQLite, and serves them via a Flask API, using requests, BeautifulSoup, pandas, and sqlite3.
 
     """)
-    st.markdown("[View Projects](https://github.com/fogapandrew?tab=repositories)", unsafe_allow_html=True)
+    st.markdown("[View Projects](https://github.com/FogapNjinju/BookHarvest/tree/main)", unsafe_allow_html=True)
 
 # Achievements Section
 st.header("Achievements")
