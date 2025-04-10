@@ -136,15 +136,6 @@ with st.expander("University Projects @ Thomas More, Mechelen, Belgium"):
     - Currently working part time at Swirlwavez on an AI home automation project.
     """)
     st.markdown("[View Projects](https://github.com/fogapandrew?tab=repositories)", unsafe_allow_html=True)
-with st.expander("Traineeship @ Foundation of Applied Statistics and Data Management (FASTDAM), Buea, Cameroon"):
-    st.markdown("**Dec 2019 - May 2020**", unsafe_allow_html=True)
-    st.write("""
-    - Undertook comprehensive training in basic statistics, mastering tools such as SPSS, Epi Data, and Microsoft Excel.
-    - Engaged in hands-on projects involving data preprocessing utilizing Epi Data and Excel, and statistical analysis using SPSS.
-    - Developed proficiency in statistical analysis software such as IBM SPSS Statistics and Epi Data.
-    - Enhanced my data management skills, particularly in handling and analyzing data using Python programming language and Microsoft Excel.
-    """)
-    st.markdown("[View Work](https://github.com/fogapandrew?tab=repositories)", unsafe_allow_html=True)
 with st.expander("University Projects @ Wolverhampton, United Kingdom"):
     st.markdown("**Nov 2024 - Jan 2026**", unsafe_allow_html=True)
     st.write("""
@@ -158,7 +149,16 @@ with st.expander("Data Engineering Projects, United Kingdom"):
 
     """)
     st.markdown("[View Projects](https://github.com/FogapNjinju/BookHarvest/tree/main)", unsafe_allow_html=True)
-
+with st.expander("Traineeship @ Foundation of Applied Statistics and Data Management (FASTDAM), Buea, Cameroon"):
+    st.markdown("**Dec 2019 - May 2020**", unsafe_allow_html=True)
+    st.write("""
+    - Undertook comprehensive training in basic statistics, mastering tools such as SPSS, Epi Data, and Microsoft Excel.
+    - Engaged in hands-on projects involving data preprocessing utilizing Epi Data and Excel, and statistical analysis using SPSS.
+    - Developed proficiency in statistical analysis software such as IBM SPSS Statistics and Epi Data.
+    - Enhanced my data management skills, particularly in handling and analyzing data using Python programming language and Microsoft Excel.
+    """)
+    st.markdown("[View Work](https://github.com/fogapandrew?tab=repositories)", unsafe_allow_html=True)
+    
 with st.expander("Job @ SKYLABASE, Buea, Cameroon"):
     st.markdown("**April 2016 - June 2018**", unsafe_allow_html=True)
     st.write("""
