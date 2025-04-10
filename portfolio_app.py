@@ -154,6 +154,12 @@ with st.expander("University Projects @ Thomas More, Mechelen, Belgium"):
     - Currently working part time at Swirlwavez on an AI home automation project.
     """)
     st.markdown("[View Projects](https://github.com/fogapandrew?tab=repositories)", unsafe_allow_html=True)
+with st.expander("Data Engineering Project, United Kingdom"):
+    st.markdown("**Jan 2025 - Present**", unsafe_allow_html=True)
+    st.write("""
+
+    """)
+    st.markdown("[View Projects](https://github.com/fogapandrew?tab=repositories)", unsafe_allow_html=True)
 
 # Achievements Section
 st.header("Achievements")
