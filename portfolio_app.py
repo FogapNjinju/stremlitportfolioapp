@@ -141,7 +141,8 @@ with st.expander("University Projects @ Wolverhampton, United Kingdom"):
     st.write("""
     - This project performs an exploratory data analysis of the "Survival from Malignant Melanoma" dataset (1962-1977, Denmark) using R, examining 205 patients' survival time, tumor thickness, age, sex, and ulceration through statistics, visualizations, correlations, and hypothesis testing, revealing outliers and gender differences.
     - Analyzed and visualized 124K+ Dutch traffic accident records using SAS Visual Analytics to identify trends, offender profiles, and safety gaps; built multi-dashboard insights and forecasts for public policy optimization.
-    - TransSync is a university-developed Transport Management System that digitizes travel agency operations in Cameroon with features like agency and client management, online booking, secure payments, analytics, and a robust Oracle-based database designed with 3NF normalization, security, and concurrency control.         
+    - TransSync is a university-developed Transport Management System that digitizes travel agency operations in Cameroon with features like agency and client management, online booking, secure payments, analytics, and a robust Oracle-based database designed with 3NF normalization, security, and concurrency control.
+    - DataMiningInformaticsHub: A comprehensive project portfolio from the University of Wolverhampton's Data Mining and Informatics course (7CS033), demonstrating expertise in data preprocessing, classification, clustering, association rule mining, and sentiment analysis using Python on diverse real-world datasets, including "adult", online retail transactions, and Twitter data.         
     """)
     st.markdown("[View Projects](https://github.com/FogapNjinju?tab=repositories)", unsafe_allow_html=True)
 with st.expander("Data Engineering Projects, United Kingdom"):
