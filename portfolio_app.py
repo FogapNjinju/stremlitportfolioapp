@@ -154,7 +154,13 @@ with st.expander("University Projects @ Thomas More, Mechelen, Belgium"):
     - Currently working part time at Swirlwavez on an AI home automation project.
     """)
     st.markdown("[View Projects](https://github.com/fogapandrew?tab=repositories)", unsafe_allow_html=True)
-with st.expander("Data Engineering Project, United Kingdom"):
+with st.expander("University Projects @ Wolverhampton, United Kingdom"):
+    st.markdown("**Nov 2024 - Jan 2026**", unsafe_allow_html=True)
+    st.write("""
+    - This project performs an exploratory data analysis of the "Survival from Malignant Melanoma" dataset (1962-1977, Denmark) using R, examining 205 patients' survival time, tumor thickness, age, sex, and ulceration through statistics, visualizations, correlations, and hypothesis testing, revealing outliers and gender differences.
+    """)
+    st.markdown("[View Projects](https://github.com/FogapNjinju?tab=repositories)", unsafe_allow_html=True)
+with st.expander("Data Engineering Projects, United Kingdom"):
     st.markdown("**Jan 2025 - Present**", unsafe_allow_html=True)
     st.write("""
     - BookHarvest: A Python data pipeline that extracts book details (titles, authors, ratings, covers) from APIs, web pages, and CSVs, stores them in SQLite, and serves them via a Flask API, using requests, BeautifulSoup, pandas, and sqlite3.
