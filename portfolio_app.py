@@ -16,8 +16,10 @@ with st.sidebar:
     st.markdown("**Data Engineer | Data Scientist**", unsafe_allow_html=True)
     try:
         st.image("profile.jpg", caption="Profile Picture", use_container_width=True, alt="Njinju Zilefac Fogap's profile picture")
-    except (FileNotFoundError, MediaFileStorageError):
+    except (FileNotFoundError, MediaFileStorageError, TypeError, Exception) as e:
         st.image("https://via.placeholder.com/150", caption="Profile Picture", use_container_width=True, alt="Placeholder profile picture")
+        # Optional: Uncomment for debugging locally, remove in production
+        # st.error(f"Failed to load profile image: {str(e)}")
     st.markdown("""
         <div style='text-align: center; color: #34495e;'>
             <a href='mailto:andrewfogap@icloud.com'>andrewfogap@icloud.com</a><br>
@@ -316,108 +318,4 @@ if "All" in project_filter or "In Progress" in project_filter:
         with col1:
             try:
                 st.image("bookharvest_thumbnail.jpg", width=100, alt="BookHarvest project thumbnail")
-            except (FileNotFoundError, MediaFileStorageError):
-                st.image("https://via.placeholder.com/100", width=100, alt="Placeholder thumbnail")
-        with col2:
-            st.markdown("**Jan 2025 - Present** <span class='status-in-progress'>In Progress</span>", unsafe_allow_html=True)
-            st.write("""
-            - Built BookHarvest pipeline with Python, extracting book data via APIs.
-            - Stored data in SQLite and served via Flask API.
-            """)
-        st.markdown("[View Projects](https://github.com/FogapNjinju/BookHarvest/tree/main)", unsafe_allow_html=True)
-if "All" in project_filter or "Completed" in project_filter:
-    with st.expander("Traineeship @ Foundation of Applied Statistics and Data Management (FASTDAM), Buea, Cameroon"):
-        col1, col2 = st.columns([1, 4])
-        with col1:
-            try:
-                st.image("fastdam_thumbnail.jpg", width=100, alt="FASTDAM project thumbnail")
-            except (FileNotFoundError, MediaFileStorageError):
-                st.image("https://via.placeholder.com/100", width=100, alt="Placeholder thumbnail")
-        with col2:
-            st.markdown("**Dec 2019 - May 2020** <span class='status-completed'>Completed</span>", unsafe_allow_html=True)
-            st.write("""
-            - Mastered SPSS, Epi Data, and Excel for statistical analysis.
-            - Conducted data preprocessing and analysis with Python.
-            """)
-        st.markdown("[View Work](https://github.com/fogapandrew?tab=repositories)", unsafe_allow_html=True)
-    with st.expander("Job @ SKYLABASE, Buea, Cameroon"):
-        col1, col2 = st.columns([1, 4])
-        with col1:
-            try:
-                st.image("skylabase_thumbnail.jpg", width=100, alt="SKYLABASE project thumbnail")
-            except (FileNotFoundError, MediaFileStorageError):
-                st.image("https://via.placeholder.com/100", width=100, alt="Placeholder thumbnail")
-        with col2:
-            st.markdown("**April 2016 - June 2018** <span class='status-completed'>Completed</span>", unsafe_allow_html=True)
-            st.write("""
-            - Managed LAN-WAN configurations for optimal performance.
-            - Set up Wide Area Networks, improving connectivity by 25%.
-            """)
-        st.markdown("[View Work](https://github.com/fogapandrew?tab=repositories)", unsafe_allow_html=True)
-
-# Achievements Section
-st.markdown("<h1 id='achievements'>Achievements</h1>", unsafe_allow_html=True)
-st.markdown("---")
-st.markdown("""
-- **Led Renewable Energy Price Prediction:** Delivered accurate predictions, reducing costs by 20% at Arinti.
-- **Cum Laude & Dean's List:** Graduated with honors from Thomas More University.
-- **Pioneered ETL Transition:** Migrated Azure ETL to GitLab, saving 15% in operational costs.
-- **Developed AI Skill-Job Tool:** Built NLP-based career matching app at Graffiland.
-- **Enhanced Network Reliability:** Improved WAN connectivity by 25% at SKYLABASE.
-""", unsafe_allow_html=True)
-
-# Certifications Section
-st.markdown("<h1 id='certifications'>Certifications</h1>", unsafe_allow_html=True)
-st.markdown("---")
-st.markdown("""
-- [Python for Data Science, AI & Development](https://www.coursera.org/account/accomplishments/certificate/4Q5YEV9K36WR) (Coursera)
-- [Introduction to Project Management](https://www.coursera.org/account/accomplishments/certificate/TUXNSLVLKK45) (Coursera)
-- [Prepare, Clean, Transform, and Load Data using PowerBI](https://www.coursera.org/account/accomplishments/certificate/6U3VUXYFX99J) (Coursera)
-- [Agile Project Management](https://www.coursera.org/account/accomplishments/certificate/L6S3FQLVVRNE) (Coursera)
-- [SAS Programmer Specialization](https://www.coursera.org/account/accomplishments/specialization/SQ42ZW9W9B49) (Coursera)
-- [Microsoft Azure for Data Engineering](https://www.coursera.org/account/accomplishments/certificate/P3EGZ6UF3CKD) (Coursera)
-""", unsafe_allow_html=True)
-
-# References Section
-st.markdown("<h1 id='references'>References</h1>", unsafe_allow_html=True)
-st.markdown("---")
-st.markdown("""
-- **Mr. Fernando Lovera**
-  *Data Engineer, Arinti*
-  Email: fernando.loveratorres@thomasmore.be
-  Phone: Available upon request
-- **Mr. Collin Van der Vorst**
-  *Course Coordinator, Thomas More University*
-  Email: collin.vandervorst@thomasmore.be
-  Phone: Available upon request
-""", unsafe_allow_html=True)
-st.write("Contact details provided upon request to respect privacy.")
-
-# Testimonials Subsection
-st.subheader("Testimonials")
-st.markdown("""
-<div class='quote-box'>
-"Njinju's ability to lead complex data projects with precision and innovation is truly remarkable. His work on the energy price prediction project was outstanding."
-— <strong>Mr. Fernando Lovera</strong>, Data Engineer, Arinti
-</div>
-<div class='quote-box'>
-"Njinju is a dedicated and talented individual with a strong grasp of data science concepts. His contributions to our academic projects were invaluable."
-— <strong>Mr. Collin Van der Vorst</strong>, Course Coordinator, Thomas More University
-</div>
-""", unsafe_allow_html=True)
-
-# Contact Form
-st.markdown("<h1 id='get-in-touch'>Get in Touch</h1>", unsafe_allow_html=True)
-st.markdown("---")
-st.markdown("<p style='color: #34495e;'>Interested in collaborating or have a job opportunity? Reach out below!</p>", unsafe_allow_html=True)
-with st.form(key="contact_form"):
-    name = st.text_input("Your Name")
-    email = st.text_input("Your Email")
-    message = st.text_area("Your Message")
-    submit_button = st.form_submit_button(label="Send Message")
-    if submit_button:
-        st.success(f"Thank you, {name}! I'll respond to your message at {email} soon.")
-
-# Footer
-st.markdown("---")
-st.markdown("<p style='text-align: center; color: #7f8c8d;'>© 2025 Njinju Zilefac Fogap | Built with Streamlit</p>", unsafe_allow_html=True)
+            except (FileNotFoundError, MediaFile
