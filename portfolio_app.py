@@ -22,6 +22,86 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+# Sidebar
+with st.sidebar:
+    st.title("Njinju Zilefac Fogap")
+    st.markdown("**Data Engineer | Data Scientist**", unsafe_allow_html=True)
+    st.image("profile.jpg", caption="Profile Picture", use_container_width=True)  # Replace with your image
+    st.markdown("""
+        <div style='text-align: center; color: #34495e;'>
+            <a href='mailto:andrewfogap@icloud.com'>andrewfogap@icloud.com</a><br>
+            <a href='tel:+447442922396'>+447442 922396</a><br>
+            <a href='https://www.linkedin.com/in/njinju-zilefac-fogap-5b713117a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' target='_blank'>LinkedIn</a> | 
+            <a href='https://github.com/fogapandrew?tab=repositories' target='_blank'>GitHub</a>
+        </div>
+    """, unsafe_allow_html=True)
+
+# Main Content
+st.title("Njinju Zilefac Fogap")
+st.markdown("<p style='text-align: center; color: #7f8c8d; font-style: italic;'>Data Engineer | Data Scientist | Innovator</p>", unsafe_allow_html=True)
+
+# Metrics Section
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.markdown("<div class='metric-box'><h3 style='color: #2874a6;'>5+</h3>Years of Experience</div>", unsafe_allow_html=True)
+with col2:
+    st.markdown("<div class='metric-box'><h3 style='color: #2874a6;'>10+</h3>Projects Completed</div>", unsafe_allow_html=True)
+with col3:
+    st.markdown("<div class='metric-box'><h3 style='color: #2874a6;'>3</h3>Degrees Earned</div>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: #34495e; margin-top: 20px;'>Welcome to my portfolio—explore my journey in data science and engineering!</p>", unsafe_allow_html=True)
+
+# CV Download Button (Placeholder)
+try:
+    with open("NjinjuZilefacFogap_CV-1.pdf", "rb") as file:
+        st.download_button(
+            label="Download My CV",
+            data=file,
+            file_name="NjinjuZilefacFogap_CV.pdf",
+            mime="application/pdf",
+            key="cv_download"
+        )
+except FileNotFoundError:
+    st.warning("CV file not found. Please ensure 'NjinjuZilefacFogap_CV-1.pdf' is in the same directory.")
+
+# About Me
+st.header("About Me")
+st.markdown("""
+    <p style='color: #34495e;'>
+    Well-informed on the basics and fundamentals of designing end-to-end solutions from ETL pipelines, algorithms, databases, websites, and machine learning models from coursework and projects. With a tireless hunger for new skills and a desire to exploit cutting-edge technology.
+    </p>
+    """, unsafe_allow_html=True)
+st.markdown("**Languages:** <span style='color: #16a085;'>English (B2), French (B1), Bangwa (C1)</span>", unsafe_allow_html=True)
+
+# Education Section
+st.header("Education")
+st.markdown("---")
+col1, col2 = st.columns(2)
+with col1:
+    st.subheader("MSc Data Science")
+    st.markdown("*University of Wolverhampton, UK*", unsafe_allow_html=True)
+    st.write("Nov 2024 - Present")
+    st.markdown("<span style='color: #8e44ad;'>Concentrations: Computing and Mathematics</span>", unsafe_allow_html=True)
+with col2:
+    st.subheader("B.S. Information Management and Multimedia")
+    st.markdown("*Thomas More University of Applied Science*", unsafe_allow_html=True)
+    st.write("Concentrations: Business and Data Science")
+    st.write("GPA: Cum Laude, Dean's List")
+st.subheader("B.S. Computer Engineering (Telecommunication)")
+st.markdown("*University of Buea*", unsafe_allow_html=True)
+st.write("Concentrations: Computer Systems and Telecommunication")
+st.write("GPA: 3.0/4, Good")
+
+# Skills Section
+st.header("Skills")
+st.markdown("---")
+st.markdown("""
+- **Languages:** <span style='color: #27ae60;'>C#, Python, SQL, PHP, SAS, Scala</span>  
+- **Web Programming:** <span style='color: #27ae60;'>Streamlit, API Development (.NET, Fast API), Front-end (HTML, CSS, JavaScript)</span>  
+- **Analytics & Database:** <span style='color: #27ae60;'>ETL/ELT Pipelines, Cloud Computing (Azure), Excel, Tableau, Power BI, SQL Databases</span>  
+- **Machine Learning:** <span style='color: #27ae60;'>Scikit-learn, Feature Engineering, Statistical Models</span>  
+- **DevOps:** <span style='color: #27ae60;'>Git, Docker, CI/CD (GitLab)</span>
+""", unsafe_allow_html=True)
+
 # Experience & Projects Section
 st.header("Experience & Projects")
 st.markdown("---")
@@ -91,3 +171,13 @@ with st.expander("Job @ SKYLABASE, Buea, Cameroon"):
     - Spearheaded the setup and maintenance of Wide Area Networks (WAN), contributing to improved network accessibility and reliability.
     """)
     st.markdown("[View Work](https://github.com/fogapandrew?tab=repositories)", unsafe_allow_html=True)
+
+# Achievements Section
+st.header("Achievements")
+st.markdown("---")
+st.markdown("""
+- **Led Renewable Energy Price Prediction Project:** Successfully drove a high-impact project at Arinti, delivering accurate electricity price predictions using gradient boosting and a Streamlit app.
+- **Cum Laude & Dean's List:** Graduated with honors from Thomas More University, recognized for academic excellence in Data Science.
+- **Pioneered ETL System Transition:** Transitioned an Azure-based ETL system to GitLab at Arinti, improving cost efficiency and operational streamlining.
+- **Developed AI Skill-Job Matching Tool:** Built an innovative web application at Graffiland, leveraging NLP and LLMs to match skills to careers.
+- **Enhanced Network Reliability:** Spearheaded WAN
