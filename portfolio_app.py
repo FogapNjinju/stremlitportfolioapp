@@ -198,7 +198,7 @@ with st.expander("University Projects @ Wolverhampton, United Kingdom"):
     col1, col2 = st.columns([1, 4])
     with col1:
         try:
-            st.image("wolverhampton_thumbnail.jpg", width=100)
+            st.image("wolverhampton_thumbnail.png", width=100)
         except (FileNotFoundError, MediaFileStorageError):
             st.write("Thumbnail not found")
     with col2:
