@@ -95,10 +95,10 @@ st.write("GPA: 3.0/4, Good")
 st.header("Skills")
 st.markdown("---")
 st.markdown("""
-- **Languages:** <span style='color: #27ae60;'>C#, Python, SQL, PHP, SAS, Scala</span>  
-- **Web Programming:** <span style='color: #27ae60;'>Streamlit, API Development (.NET, Fast API), Front-end (HTML, CSS, JavaScript)</span>  
-- **Analytics & Database:** <span style='color: #27ae60;'>ETL/ELT Pipelines, Cloud Computing (Azure), Excel, Tableau, Power BI, SQL Databases</span>  
-- **Machine Learning:** <span style='color: #27ae60;'>Scikit-learn, Feature Engineering, Statistical Models</span>  
+- **Languages:** <span style='color: #27ae60;'>C#, Python, SQL, PHP, SAS, Scala</span>
+- **Web Programming:** <span style='color: #27ae60;'>Streamlit, API Development (.NET, Fast API), Front-end (HTML, CSS, JavaScript)</span>
+- **Analytics & Database:** <span style='color: #27ae60;'>ETL/ELT Pipelines, Cloud Computing (Azure), Excel, Tableau, Power BI, SQL Databases</span>
+- **Machine Learning:** <span style='color: #27ae60;'>Scikit-learn, Feature Engineering, Statistical Models</span>
 - **DevOps:** <span style='color: #27ae60;'>Git, Docker, CI/CD (GitLab)</span>
 """, unsafe_allow_html=True)
 
@@ -180,4 +180,48 @@ st.markdown("""
 - **Cum Laude & Dean's List:** Graduated with honors from Thomas More University, recognized for academic excellence in Data Science.
 - **Pioneered ETL System Transition:** Transitioned an Azure-based ETL system to GitLab at Arinti, improving cost efficiency and operational streamlining.
 - **Developed AI Skill-Job Matching Tool:** Built an innovative web application at Graffiland, leveraging NLP and LLMs to match skills to careers.
-- **Enhanced Network Reliability:** Spearheaded WAN
+- **Enhanced Network Reliability:** Spearheaded WAN setup and maintenance at SKYLABASE, improving connectivity for multiple stakeholders.
+""", unsafe_allow_html=True)
+
+# Certifications Section
+st.header("Certifications")
+st.markdown("---")
+st.markdown("""
+- [Python for Data Science, AI & Development](https://www.coursera.org/account/accomplishments/certificate/4Q5YEV9K36WR) (Coursera)
+- [Introduction to Project Management](https://www.coursera.org/account/accomplishments/certificate/TUXNSLVLKK45) (Coursera)
+- [Prepare, Clean, Transform, and Load Data using PowerBI](https://www.coursera.org/account/accomplishments/certificate/6U3VUXYFX99J) (Coursera)
+- [Agile Project Management](https://www.coursera.org/account/accomplishments/certificate/L6S3FQLVVRNE) (Coursera)
+- [SAS Programmer Specialization](https://www.coursera.org/account/accomplishments/specialization/SQ42ZW9W9B49) (Coursera)
+- [Microsoft Azure for Data Engineering](https://www.coursera.org/account/accomplishments/certificate/P3EGZ6UF3CKD) (Coursera)
+""", unsafe_allow_html=True)
+
+# References Section
+st.header("References")
+st.markdown("---")
+st.markdown("""
+- **Mr. Fernando Lovera**
+  *Data Engineer, Arinti*
+  Email: fernando.loveratorres@thomasmore.be
+  Phone: Available upon request
+- **Mr. Collin Van der Vorst**
+  *Course Coordinator, Thomas More University*
+  Email: collin.vandervorst@thomasmore.be
+  Phone: Available upon request
+""", unsafe_allow_html=True)
+st.write("Contact details provided upon request to respect privacy.")
+
+# Contact Form
+st.header("Get in Touch")
+st.markdown("---")
+st.markdown("<p style='color: #34495e;'>Interested in collaborating or have a job opportunity? Reach out below!</p>", unsafe_allow_html=True)
+with st.form(key="contact_form"):
+    name = st.text_input("Your Name")
+    email = st.text_input("Your Email")
+    message = st.text_area("Your Message")
+    submit_button = st.form_submit_button(label="Send Message")
+    if submit_button:
+        st.success(f"Thank you, {name}! I'll respond to your message at {email} soon.")
+
+# Footer
+st.markdown("---")
+st.markdown("<p style='text-align: center; color: #7f8c8d;'>© 2025 Njinju Zilefac Fogap | Built with Streamlit</p>", unsafe_allow_html=True)
