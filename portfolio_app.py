@@ -290,7 +290,7 @@ if "All" in project_filter or "In Progress" in project_filter:
         col1, col2 = st.columns([1, 4])
         with col1:
             try:
-                st.image("wolverhampton_thumbnail.jpg", width=100emitter
+                st.image("wolverhampton_thumbnail.jpg", width=100, alt="Wolverhampton project thumbnail")
             except (FileNotFoundError, MediaFileStorageError):
                 st.image("https://via.placeholder.com/100", width=100, alt="Placeholder thumbnail")
         with col2:
