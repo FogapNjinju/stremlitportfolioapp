@@ -305,11 +305,11 @@ st.write("Contact details provided upon request to respect privacy.")
 st.subheader("Testimonials")
 st.markdown("""
 <div class='quote-box'>
-"Andrew's ability to lead complex data projects with precision and innovation is truly remarkable. His work on the energy price prediction project was outstanding."
+"Njinju's ability to lead complex data projects with precision and innovation is truly remarkable. His work on the energy price prediction project was outstanding."
 — <strong>Mr. Fernando Lovera</strong>, Data Engineer, Arinti
 </div>
 <div class='quote-box'>
-"Andrew is a dedicated and talented individual with a strong grasp of data science concepts. His contributions to our academic projects were invaluable."
+"Njinju is a dedicated and talented individual with a strong grasp of data science concepts. His contributions to our academic projects were invaluable."
 — <strong>Mr. Collin Van der Vorst</strong>, Course Coordinator, Thomas More University
 </div>
 """, unsafe_allow_html=True)
