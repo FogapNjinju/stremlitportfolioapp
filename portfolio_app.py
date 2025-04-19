@@ -2,7 +2,6 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 from streamlit.runtime.media_file_storage import MediaFileStorageError
-import uuid
 
 # Page Configuration
 st.set_page_config(page_title="Njinju Zilefac Fogap - Portfolio", layout="wide", initial_sidebar_state="expanded")
@@ -15,7 +14,10 @@ if "theme" not in st.session_state:
 with st.sidebar:
     st.title("Njinju Zilefac Fogap")
     st.markdown("**Data Engineer | Data Scientist**", unsafe_allow_html=True)
-    st.image("profile.jpg", caption="Profile Picture", use_container_width=True, alt="Njinju Zilefac Fogap's profile picture")
+    try:
+        st.image("profile.jpg", caption="Profile Picture", use_container_width=True, alt="Njinju Zilefac Fogap's profile picture")
+    except (FileNotFoundError, MediaFileStorageError):
+        st.image("https://via.placeholder.com/150", caption="Profile Picture", use_container_width=True, alt="Placeholder profile picture")
     st.markdown("""
         <div style='text-align: center; color: #34495e;'>
             <a href='mailto:andrewfogap@icloud.com'>andrewfogap@icloud.com</a><br>
@@ -64,7 +66,95 @@ with st.sidebar:
         .status-completed { background-color: #2ecc71; color: white; padding: 5px 10px; border-radius: 12px; font-size: 12px; font-weight: bold; display: inline-block; margin-left: 10px; }
         .status-in-progress { background-color: #f39c12; color: white; padding: 5px 10px; border-radius: 12px; font-size: 12px; font-weight: bold; display: inline-block; margin-left: 10px; }
         .quote-box { background-color: #f1f8ff; border-left: 4px solid #3498db; padding: 10px; margin: 10px 0; font-style: italic; }
-        img[alt="Profile Picture"] { border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        img[alt="Profile Picture"], img[alt="Placeholder profile picture"] { border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        img { loading: lazy; }
+        @media (max-width: 768px) {
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; }
+            p, li { font-size: 16px; }
+            .sidebar img { width: 80px; }
+        }
+        </style>
+        """, unsafe_allow_html=True)
+    elif theme == "Dark":
+        st.markdown("""
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Poppins&display=swap');
+        .main { background-color: #2c3e50; }
+        .sidebar .sidebar-content { background-color: #34495e; padding: 15px; border-radius: 10px; }
+        h1 { color: #ecf0f1; font-family: 'Roboto', sans-serif; font-weight: 700; text-align: center; }
+        h2 { color: #bdc3c7; font-family: 'Roboto', sans-serif; font-weight: 600; }
+        p, li, a { font-family: 'Poppins', sans-serif; color: #ecf0f1; }
+        .stExpander { background-color: #34495e; border: 1px solid #7f8c8d; border-radius: 5px; padding: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); }
+        .stButton>button { background Wrote 6144 chars, showing first 6144:import streamlit as st
+import plotly.express as px
+import pandas as pd
+from streamlit.runtime.media_file_storage import MediaFileStorageError
+
+# Page Configuration
+st.set_page_config(page_title="Njinju Zilefac Fogap - Portfolio", layout="wide", initial_sidebar_state="expanded")
+
+# Theme Persistence
+if "theme" not in st.session_state:
+    st.session_state.theme = "Light"
+
+# Sidebar
+with st.sidebar:
+    st.title("Njinju Zilefac Fogap")
+    st.markdown("**Data Engineer | Data Scientist**", unsafe_allow_html=True)
+    try:
+        st.image("profile.jpg", caption="Profile Picture", use_container_width=True, alt="Njinju Zilefac Fogap's profile picture")
+    except (FileNotFoundError, MediaFileStorageError):
+        st.image("https://via.placeholder.com/150", caption="Profile Picture", use_container_width=True, alt="Placeholder profile picture")
+    st.markdown("""
+        <div style='text-align: center; color: #34495e;'>
+            <a href='mailto:andrewfogap@icloud.com'>andrewfogap@icloud.com</a><br>
+            <a href='tel:+447442922396'>+447442 922396</a><br>
+            <a href='https://www.linkedin.com/in/njinju-zilefac-fogap-5b713117a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' target='_blank'>LinkedIn</a> | 
+            <a href='https://github.com/fogapandrew?tab=repositories' target='_blank'>GitHub</a>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    # Navigation Menu
+    st.markdown("""
+    <div style='margin-top: 20px;'>
+        <strong>Navigate</strong><br>
+        <a href='#about-me'>About Me</a><br>
+        <a href='#education'>Education</a><br>
+        <a href='#skills'>Skills</a><br>
+        <a href='#experience-projects'>Experience & Projects</a><br>
+        <a href='#achievements'>Achievements</a><br>
+        <a href='#certifications'>Certifications</a><br>
+        <a href='#references'>References</a><br>
+        <a href='#get-in-touch'>Contact</a>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Theme Toggle
+    theme = st.selectbox("Select Theme", ["Light", "Dark", "High Contrast"], index=["Light", "Dark", "High Contrast"].index(st.session_state.theme))
+    st.session_state.theme = theme
+    
+    # CSS for Themes
+    if theme == "Light":
+        st.markdown("""
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Poppins&display=swap');
+        .main { background-color: #f4f7fa; }
+        .sidebar .sidebar-content { background-color: #dbe9ff; padding: 15px; border-radius: 10px; }
+        h1 { color: #1a5276; font-family: 'Roboto', sans-serif; font-weight: 700; text-align: center; }
+        h2 { color: #2874a6; font-family: 'Roboto', sans-serif; font-weight: 600; }
+        p, li, a { font-family: 'Poppins', sans-serif; }
+        .stExpander { background-color: #ffffff; border: 1px solid #d5e8ff; border-radius: 5px; padding: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); }
+        .stButton>button { background-color: #e67e22; color: white; border-radius: 5px; border: none; padding: 8px 15px; }
+        .stButton>button:hover { background-color: #d35400; }
+        .stTextInput>div>input, .stTextArea>div>textarea { border-radius: 5px; border: 1px solid #3498db; background-color: #fff; }
+        a { color: #e74c3c; text-decoration: none; }
+        a:hover { color: #c0392b; text-decoration: underline; }
+        .metric-box { background-color: #ffffff; border: 1px solid #d5e8ff; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .status-completed { background-color: #2ecc71; color: white; padding: 5px 10px; border-radius: 12px; font-size: 12px; font-weight: bold; display: inline-block; margin-left: 10px; }
+        .status-in-progress { background-color: #f39c12; color: white; padding: 5px 10px; border-radius: 12px; font-size: 12px; font-weight: bold; display: inline-block; margin-left: 10px; }
+        .quote-box { background-color: #f1f8ff; border-left: 4px solid #3498db; padding: 10px; margin: 10px 0; font-style: italic; }
+        img[alt="Profile Picture"], img[alt="Placeholder profile picture"] { border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
         img { loading: lazy; }
         @media (max-width: 768px) {
             h1 { font-size: 24px; }
@@ -93,7 +183,7 @@ with st.sidebar:
         .status-completed { background-color: #2ecc71; color: white; padding: 5px 10px; border-radius: 12px; font-size: 12px; font-weight: bold; display: inline-block; margin-left: 10px; }
         .status-in-progress { background-color: #f39c12; color: white; padding: 5px 10px; border-radius: 12px; font-size: 12px; font-weight: bold; display: inline-block; margin-left: 10px; }
         .quote-box { background-color: #2c3e50; border-left: 4px solid #3498db; padding: 10px; margin: 10px 0; font-style: italic; color: #ecf0f1; }
-        img[alt="Profile Picture"] { border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        img[alt="Profile Picture"], img[alt="Placeholder profile picture"] { border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
         img { loading: lazy; }
         @media (max-width: 768px) {
             h1 { font-size: 24px; }
@@ -122,7 +212,7 @@ with st.sidebar:
         .status-completed { background-color: #0f0; color: #000; padding: 5px 10px; border-radius: 12px; font-size: 12px; font-weight: bold; display: inline-block; margin-left: 10px; }
         .status-in-progress { background-color: #ff0; color: #000; padding: 5px 10px; border-radius: 12px; font-size: 12px; font-weight: bold; display: inline-block; margin-left: 10px; }
         .quote-box { background-color: #333; border-left: 4px solid #fff; padding: 10px; margin: 10px 0; font-style: italic; color: #fff; }
-        img[alt="Profile Picture"] { border-radius: 50%; box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); }
+        img[alt="Profile Picture"], img[alt="Placeholder profile picture"] { border-radius: 50%; box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); }
         img { loading: lazy; }
         @media (max-width: 768px) {
             h1 { font-size: 24px; }
@@ -172,7 +262,7 @@ try:
     <iframe src='NjinjuZilefacFogap_CV-1.pdf' width='100%' height='600px' style='border: none;'></iframe>
     """, unsafe_allow_html=True)
 except FileNotFoundError:
-    st.warning("CV file not found. Please ensure 'NjinjuZilefacFogap_CV-1.pdf' is in the same directory.")
+    st.warning("CV file not found | Please ensure 'NjinjuZilefacFogap_CV-1.pdf' is in the same directory.")
 
 # About Me
 st.markdown("<h1 id='about-me'>About Me</h1>", unsafe_allow_html=True)
@@ -324,34 +414,34 @@ if "All" in project_filter or "In Progress" in project_filter:
             """)
         st.markdown("[View Projects](https://github.com/FogapNjinju/BookHarvest/tree/main)", unsafe_allow_html=True)
 if "All" in project_filter or "Completed" in project_filter:
-    with st.expander("Traineeship @ Foundation of Applied Statistics and Data Management (FASTDAM), Buea, Cameroon"):
-        col1, col2 = st.columns([1, 4])
-        with col1:
-            try:
-                st.image("fastdam_thumbnail.jpg", width=100, alt="FASTDAM project thumbnail")
-            except (FileNotFoundError, MediaFileStorageError):
-                st.image("https://via.placeholder.com/100", width=100, alt="Placeholder thumbnail")
-        with col2:
-            st.markdown("**Dec 2019 - May 2020** <span class='status-completed'>Completed</span>", unsafe_allow_html=True)
-            st.write("""
-            - Mastered SPSS, Epi Data, and Excel for statistical analysis.
-            - Conducted data preprocessing and analysis with Python.
-            """)
-        st.markdown("[View Work](https://github.com/fogapandrew?tab=repositories)", unsafe_allow_html=True)
-    with st.expander("Job @ SKYLABASE, Buea, Cameroon"):
-        col1, col2 = st.columns([1, 4])
-        with col1:
-            try:
-                st.image("skylabase_thumbnail.jpg", width=100, alt="SKYLABASE project thumbnail")
-            except (FileNotFoundError, MediaFileStorageError):
-                st.image("https://via.placeholder.com/100", width=100, alt="Placeholder thumbnail")
-        with col2:
-            st.markdown("**April 2016 - June 2018** <span class='status-completed'>Completed</span>", unsafe_allow_html=True)
-            st.write("""
-            - Managed LAN-WAN configurations for optimal performance.
-            - Set up Wide Area Networks, improving connectivity by 25%.
-            """)
-        st.markdown("[View Work](https://github.com/fogapandrew?tab=repositories)", unsafe_allow_html=True)
+        with st.expander("Traineeship @ Foundation of Applied Statistics and Data Management (FASTDAM), Buea, Cameroon"):
+            col1, col2 = st.columns([1, 4])
+            with col1:
+                try:
+                    st.image("fastdam_thumbnail.jpg", width=100, alt="FASTDAM project thumbnail")
+                except (FileNotFoundError, MediaFileStorageError):
+                    st.image("https://via.placeholder.com/100", width=100, alt="Placeholder thumbnail")
+            with col2:
+                st.markdown("**Dec 2019 - May 2020** <span class='status-completed'>Completed</span>", unsafe_allow_html=True)
+                st.write("""
+                - Mastered SPSS, Epi Data, and Excel for statistical analysis.
+                - Conducted data preprocessing and analysis with Python.
+                """)
+            st.markdown("[View Work](https://github.com/fogapandrew?tab=repositories)", unsafe_allow_html=True)
+        with st.expander("Job @ SKYLABASE, Buea, Cameroon"):
+            col1, col2 = st.columns([1, 4])
+            with col1:
+                try:
+                    st.image("skylabase_thumbnail.jpg", width=100, alt="SKYLABASE project thumbnail")
+                except (FileNotFoundError, MediaFileStorageError):
+                    st.image("https://via.placeholder.com/100", width=100, alt="Placeholder thumbnail")
+            with col2:
+                st.markdown("**April 2016 - June 2018** <span class='status-completed'>Completed</span>", unsafe_allow_html=True)
+                st.write("""
+                - Managed LAN-WAN configurations for optimal performance.
+                - Set up Wide Area Networks, improving connectivity by 25%.
+                """)
+            st.markdown("[View Work](https://github.com/fogapandrew?tab=repositories)", unsafe_allow_html=True)
 
 # Achievements Section
 st.markdown("<h1 id='achievements'>Achievements</h1>", unsafe_allow_html=True)
