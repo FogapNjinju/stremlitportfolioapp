@@ -63,7 +63,10 @@ with st.sidebar:
 
 # Main Content
 st.title("Njinju Zilefac Fogap")
-st.markdown("<p style='text-align: center; color: #7f8c8d; font-style: italic;'>Data Engineer | Data Scientist | Innovator</p>", unsafe_allow_html=True)
+st.markdown(
+    "<p style='text-align: center; color: #7f8c8d; font-style: italic;'>Data Engineer | Data Scientist | Innovator</p>",
+    unsafe_allow_html=True
+)
 
 # Metrics Section
 col1, col2, col3 = st.columns(3)
@@ -226,4 +229,103 @@ with st.expander("Data Engineering Projects, United Kingdom"):
         st.write("""
         - BookHarvest: A Python data pipeline that extracts book details (titles, authors, ratings, covers) from APIs, web pages, and CSVs, stores them in SQLite, and serves them via a Flask API, using requests, BeautifulSoup, pandas, and sqlite3.
         """)
-    st.markdown("[View Projects](https://github.com/FogapNjinju/BookHarvest/tree/main)", unsafe_allow_html=True
+    st.markdown("[View Projects](https://github.com/FogapNjinju/BookHarvest/tree/main)", unsafe_allow_html=True)
+with st.expander("Traineeship @ Foundation of Applied Statistics and Data Management (FASTDAM), Buea, Cameroon"):
+    col1, col2 = st.columns([1, 4])
+    with col1:
+        try:
+            st.image("fastdam_thumbnail.jpg", width=100)
+        except (FileNotFoundError, MediaFileStorageError):
+            st.write("Thumbnail not found")
+    with col2:
+        st.markdown("**Dec 2019 - May 2020** <span class='status-completed'>Completed</span>", unsafe_allow_html=True)
+        st.write("""
+        - Undertook comprehensive training in basic statistics, mastering tools such as SPSS, Epi Data, and Microsoft Excel.
+        - Engaged in hands-on projects involving data preprocessing utilizing Epi Data and Excel, and statistical analysis using SPSS.
+        - Developed proficiency in statistical analysis software such as IBM SPSS Statistics and Epi Data.
+        - Enhanced my data management skills, particularly in handling and analyzing data using Python programming language and Microsoft Excel.
+        """)
+    st.markdown("[View Work](https://github.com/fogapandrew?tab=repositories)", unsafe_allow_html=True)
+with st.expander("Job @ SKYLABASE, Buea, Cameroon"):
+    col1, col2 = st.columns([1, 4])
+    with col1:
+        try:
+            st.image("skylabase_thumbnail.jpg", width=100)
+        except (FileNotFoundError, MediaFileStorageError):
+            st.write("Thumbnail not found")
+    with col2:
+        st.markdown("**April 2016 - June 2018** <span class='status-completed'>Completed</span>", unsafe_allow_html=True)
+        st.write("""
+        - Collaborated within a team of 6 professionals, taking charge of monitoring and deploying internet services.
+        - Demonstrated expertise in Linux and Ubuntu environments, facilitating effective network administration.
+        - Managed LAN-WAN configurations, ensuring seamless connectivity and optimal performance.
+        - Spearheaded the setup and maintenance of Wide Area Networks (WAN), contributing to improved network accessibility and reliability.
+        """)
+    st.markdown("[View Work](https://github.com/fogapandrew?tab=repositories)", unsafe_allow_html=True)
+
+# Achievements Section
+st.header("Achievements")
+st.markdown("---")
+st.markdown("""
+- **Led Renewable Energy Price Prediction Project:** Successfully drove a high-impact project at Arinti, delivering accurate electricity price predictions using gradient boosting and a Streamlit app.
+- **Cum Laude & Dean's List:** Graduated with honors from Thomas More University, recognized for academic excellence in Data Science.
+- **Pioneered ETL System Transition:** Transitioned an Azure-based ETL system to GitLab at Arinti, improving cost efficiency and operational streamlining.
+- **Developed AI Skill-Job Matching Tool:** Built an innovative web application at Graffiland, leveraging NLP and LLMs to match skills to careers.
+- **Enhanced Network Reliability:** Spearheaded WAN setup and maintenance at SKYLABASE, improving connectivity for multiple stakeholders.
+""", unsafe_allow_html=True)
+
+# Certifications Section
+st.header("Certifications")
+st.markdown("---")
+st.markdown("""
+- [Python for Data Science, AI & Development](https://www.coursera.org/account/accomplishments/certificate/4Q5YEV9K36WR) (Coursera)
+- [Introduction to Project Management](https://www.coursera.org/account/accomplishments/certificate/TUXNSLVLKK45) (Coursera)
+- [Prepare, Clean, Transform, and Load Data using PowerBI](https://www.coursera.org/account/accomplishments/certificate/6U3VUXYFX99J) (Coursera)
+- [Agile Project Management](https://www.coursera.org/account/accomplishments/certificate/L6S3FQLVVRNE) (Coursera)
+- [SAS Programmer Specialization](https://www.coursera.org/account/accomplishments/specialization/SQ42ZW9W9B49) (Coursera)
+- [Microsoft Azure for Data Engineering](https://www.coursera.org/account/accomplishments/certificate/P3EGZ6UF3CKD) (Coursera)
+""", unsafe_allow_html=True)
+
+# References Section
+st.header("References")
+st.markdown("---")
+st.markdown("""
+- **Mr. Fernando Lovera**
+  *Data Engineer, Arinti*
+  Email: fernando.loveratorres@thomasmore.be
+  Phone: Available upon request
+- **Mr. Collin Van der Vorst**
+  *Course Coordinator, Thomas More University*
+  Email: collin.vandervorst@thomasmore.be
+  Phone: Available upon request
+""", unsafe_allow_html=True)
+st.write("Contact details provided upon request to respect privacy.")
+
+# Testimonials Subsection
+st.subheader("Testimonials")
+st.markdown("""
+<div class='quote-box'>
+"Andrew's ability to lead complex data projects with precision and innovation is truly remarkable. His work on the energy price prediction project was outstanding."
+— <strong>Mr. Fernando Lovera</strong>, Data Engineer, Arinti
+</div>
+<div class='quote-box'>
+"Andrew is a dedicated and talented individual with a strong grasp of data science concepts. His contributions to our academic projects were invaluable."
+— <strong>Mr. Collin Van der Vorst</strong>, Course Coordinator, Thomas More University
+</div>
+""", unsafe_allow_html=True)
+
+# Contact Form
+st.header("Get in Touch")
+st.markdown("---")
+st.markdown("<p style='color: #34495e;'>Interested in collaborating or have a job opportunity? Reach out below!</p>", unsafe_allow_html=True)
+with st.form(key="contact_form"):
+    name = st.text_input("Your Name")
+    email = st.text_input("Your Email")
+    message = st.text_area("Your Message")
+    submit_button = st.form_submit_button(label="Send Message")
+    if submit_button:
+        st.success(f"Thank you, {name}! I'll respond to your message at {email} soon.")
+
+# Footer
+st.markdown("---")
+st.markdown("<p style='text-align: center; color: #7f8c8d;'>© 2025 Njinju Zilefac Fogap | Built with Streamlit</p>", unsafe_allow_html=True)
