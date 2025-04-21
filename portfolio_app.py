@@ -95,7 +95,7 @@ except FileNotFoundError:
 st.header("About Me")
 st.markdown("""
     <p style='color: #34495e;'>
-    Well-informed on the basics and fundamentals of designing end-to-end solutions from ETL pipelines, algorithms, databases, websites, and machine learning models from coursework and projects. With a tireless hunger for new skills and a desire to exploit cutting-edge technology.
+    Well-informed on the basics and fundamentals of designing end-to-end solutions from ETL pipelines, algorithms, databases, websites, and machine learning models from coursework, industries and projects. With a tireless hunger for new skills and a desire to exploit cutting-edge technology.
     </p>
     """, unsafe_allow_html=True)
 st.markdown("**Languages:** <span style='color: #16a085;'>English (B2), French (B1), Bangwa (C1)</span>", unsafe_allow_html=True)
