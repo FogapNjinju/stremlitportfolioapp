@@ -111,12 +111,12 @@ with col1:
     st.markdown("<span style='color: #8e44ad;'>Concentrations: Computing and Mathematics</span>", unsafe_allow_html=True)
 with col2:
     st.subheader("B.S. Information Management and Multimedia")
-    st.markdown("*Thomas More University of Applied Science*", unsafe_allow_html=True)
-    st.write("Concentrations: Business and Data Science")
-    st.write("GPA: Cum Laude, Dean's List")
+    st.markdown("*Thomas More University of Applied Science, Belgium*", unsafe_allow_html=True)
+    st.markdown("<span style='color: #8e44ad;'>Concentrations: Business and Data Science</span>", unsafe_allow_html=True)
+    st.write("GPA: Cum Laude, Distinction")
 st.subheader("B.S. Computer Engineering (Telecommunication)")
-st.markdown("*University of Buea*", unsafe_allow_html=True)
-st.write("Concentrations: Computer Systems and Telecommunication")
+st.markdown("*University of Buea, Cameroon*", unsafe_allow_html=True)
+st.markdown("<span style='color: #8e44ad;'>Concentrations: Computer Systems and Telecommunication</span>", unsafe_allow_html=True)
 st.write("GPA: 3.0/4, Good")
 
 # Skills Section
