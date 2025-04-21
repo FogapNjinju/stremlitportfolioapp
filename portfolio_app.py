@@ -110,7 +110,7 @@ with col1:
     st.write("Nov 2024 - Present")
     st.markdown("<span style='color: #8e44ad;'>Concentrations: Computing and Mathematics</span>", unsafe_allow_html=True)
 with col2:
-    st.subheader("B.S. Information Management and Multimedia")
+    st.subheader("B.S. Information Management and Multimedia (Data Science)")
     st.markdown("*Thomas More University of Applied Science, Belgium*", unsafe_allow_html=True)
     st.markdown("<span style='color: #8e44ad;'>Concentrations: Business and Data Science</span>", unsafe_allow_html=True)
     st.write("GPA: Cum Laude, Distinction")
