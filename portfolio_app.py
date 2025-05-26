@@ -208,6 +208,8 @@ with st.expander("University Projects @ Wolverhampton, United Kingdom"):
         - Analyzed and visualized 124K+ Dutch traffic accident records using SAS Visual Analytics to identify trends, offender profiles, and safety gaps; built multi-dashboard insights and forecasts for public policy optimization.
         - TransSync is a university-developed Transport Management System that digitizes travel agency operations in Cameroon with features like agency and client management, online booking, secure payments, analytics, and a robust Oracle-based database designed with 3NF normalization, security, and concurrency control.
         - DataMiningInformaticsHub: A comprehensive project portfolio from the University of Wolverhampton's Data Mining and Informatics course (7CS033), demonstrating expertise in data preprocessing, classification, clustering, association rule mining, and sentiment analysis using Python on diverse real-world datasets, including "adult", online retail transactions, and Twitter data.
+        - Analysis & optimization of a 36-node urban logistics network using Python (NetworkX, Folium, Matplotlib), SAS, & graph theory. Includes centrality, community detection, MST, TSP, & MCNF to enhance delivery efficiency.
+        - ML-driven system for early detection of mental health disorders using multimodal data (social media, physiological, clinical). Features supervised ML models, ethical frameworks, and a Streamlit web app for real-time predictions, aiming to enhance accessibility and reduce global mental health costs.
         """)
         # Interactive Visualization
         data = pd.DataFrame({
